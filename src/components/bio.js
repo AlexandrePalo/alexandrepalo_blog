@@ -21,6 +21,7 @@ function Bio() {
           <div
             style={{
               display: `flex`,
+              alignItems: "center",
               marginBottom: rhythm(2.5),
             }}
           >
@@ -37,14 +38,16 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
-            </p>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <span>
+                Pas grand chose d'utile, mais beaucoup de trucs cools.
+              </span>
+              <div>
+                <a href={`https://twitter.com/${social.twitter}`}>
+                  Sur Twitter
+                </a>
+              </div>
+            </div>
           </div>
         )
       }}
@@ -56,7 +59,7 @@ const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 100, height: 100) {
           ...GatsbyImageSharpFixed
         }
       }
