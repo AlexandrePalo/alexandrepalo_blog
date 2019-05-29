@@ -24,6 +24,7 @@ class Layout extends React.Component {
               color: `inherit`,
             }}
             to={`/`}
+            className="header-blogtitle"
           >
             {title}
           </Link>
@@ -42,6 +43,7 @@ class Layout extends React.Component {
               color: `inherit`,
             }}
             to={`/`}
+            className="header-blogtitle"
           >
             {title}
           </Link>
