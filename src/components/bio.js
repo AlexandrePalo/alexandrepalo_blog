@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 
 function Bio() {
   return (
@@ -32,15 +32,21 @@ function Bio() {
                 }}
               />
             </div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
               <span>
                 Pas grand chose d'utile, mais beaucoup de trucs cools.
               </span>
-              <div>
+              <span style={{ ...scale(-2 / 5), marginTop: rhythm(1 / 5) }}>
+                Ingénieur. Fait voler des trucs. Aime bien coder un peu.{" "}
                 <a href={`https://twitter.com/${social.twitter}`}>
                   Sur Twitter
                 </a>
-              </div>
+              </span>
             </div>
           </div>
         )
