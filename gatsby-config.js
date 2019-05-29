@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog Alexandre Palo`,
+    title: `Blog - Alexandre Palo`,
     author: `Alexandre Palo`,
     description: `Pas grand chose d'utile, mais beaucoup de trucs cools !`,
     siteUrl: `https://blog.alexandrepalo.com`,

@@ -10,18 +10,17 @@ class Layout extends React.Component {
     let header
 
     if (location.pathname === rootPath) {
+      // Root index path
       header = (
         <h1
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            ...scale(1.25),
+            marginBottom: rhythm(1.25),
             marginTop: 0,
           }}
         >
           <Link
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
               color: `inherit`,
             }}
             to={`/`}
@@ -31,17 +30,15 @@ class Layout extends React.Component {
         </h1>
       )
     } else {
+      // Light header for article
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
         >
           <Link
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
               color: `inherit`,
             }}
             to={`/`}
@@ -56,16 +53,14 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(30),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer style={{ ...scale(-1 / 5) }}>
+          © {new Date().getFullYear()}, built with love.
         </footer>
       </div>
     )

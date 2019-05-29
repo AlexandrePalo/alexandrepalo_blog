@@ -1,0 +1,13 @@
+img {
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1) !important;
+  border-radius: 10px !important;
+}
+
+.gatsby-highlight {
+  margin-bottom: 1.75rem;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: initial;
+}
